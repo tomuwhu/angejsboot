@@ -1,38 +1,20 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title><%= title %></title>
-<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-<link rel="stylesheet" href="ui/ui-bootstrap-2.5.0-csp.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
-<link rel="stylesheet" href="stylesheets/style.css">
-<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
-<script src="angularjs/angular.min.js"></script>
-<script src="angularjs/angular-animate.min.js"></script>
-<script src="angularjs/angular-route.min.js"></script>
-<script src="angularjs/angular-touch.min.js"></script>
-<script src="ui/ui-bootstrap-tpls-2.5.0.min.js"></script>
-<script src="ajs/index.js">
-</script>
-<body ng-app="a" ng-controller="c" style="margin:10px;">
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+<%- include('ajs_header', {title: 'A&E_js', js: 'index.js' }) %>
 
     <a class="btn btn-danger btn-xs" ng-click="getcsapatok()">Getdata</a>
     <hr>
+        <input value = '<%=iv%>' />
+    <hr>
      <div ng-repeat="csapat in csapatok">
-
-           <p class="bg-primary text-center img-rounded">
+         <p class="bg-primary text-center img-rounded">
              <br>
              {{csapat.nev}}
              <br><br>
-           </p>
+         </p>
          <table class="table table-striped">
              <tr ng-repeat="jatekos in csapat.jatekosok">
                <td> {{jatekos.mezszam}} </td><td> {{jatekos.nev}} </td>
              </tr>
          </table>
      </div>
-</body>
-</html>
+
+<%- include('ajs_footer') %>
