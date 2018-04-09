@@ -2,8 +2,11 @@
 
   menu.forEach( (v,k) => {
 
-    if (index==k) {%> <li class="active"><%- v.felirat -%></li> <%}
-    else {%> <li><a href="<%- v.url -%>"><%- v.felirat -%></a></li> <%}
+      if (index==k) {%>
+<li class="active"><%- v.felirat -%></li> <%
+      } else {%>
+<li><a href="<%- v.url -%>"><%- v.felirat -%></a></li> <%
+      }
 
   })
 
