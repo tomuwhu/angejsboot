@@ -2,37 +2,35 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title><%= title %></title>
-<% if ( includes.includes('ui.bootstrap') ) { %>
-  <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
-  <link rel="stylesheet" href="bootstrap/ui-bootstrap-2.5.0-csp.css">
-<%} %>
-<% if ( includes.includes('bulma') ) { %>
-  <link rel="stylesheet" href="bootstrap/bulma.min.css">
-<%} %>
+<title><%= title %></title><%
+   if ( includes.includes('ui.bootstrap') ) { %>
+<link rel="stylesheet" href="bootstrap/bootstrap.min.css">
+<link rel="stylesheet" href="bootstrap/ui-bootstrap-2.5.0-csp.css"><%
+   }
+   if ( includes.includes('bulma') ) {%>
+<link rel="stylesheet" href="bootstrap/bulma.min.css"><%
+   }
+%>
 <link rel="stylesheet" href="css/style.css">
 <script src="angularjs/angular.min.js"></script>
 <script src="angularjs/angular-animate.min.js"></script>
 <script src="angularjs/angular-route.min.js"></script>
-<script src="angularjs/angular-touch.min.js"></script>
-<% if ( includes.includes('ui.bootstrap') ) { %>
-  <script src="bootstrap/ui-bootstrap-tpls-2.5.0.min.js"></script>
-<%} %>
-<% if ( includes.includes('chartjs') ) { %>
-  <script src="chart/Chart.bundle.js"></script>
-  <script src="chart/utils.js"></script>
-  <style>
-  canvas{
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
-  }
-  </style>
-<%} %>
+<script src="angularjs/angular-touch.min.js"></script><%
+   if ( includes.includes('ui.bootstrap') ) { %>
+<script src="bootstrap/ui-bootstrap-tpls-2.5.0.min.js"></script><%
+   }
+   if ( includes.includes('chartjs') ) {
+%><script src="chart/Chart.bundle.js"></script>
+<script src="chart/utils.js"></script>
+<style>
+canvas{
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+</style><%
+    }
+%>
 <script src=<%= "ajs/"+js %> ></script>
 <body ng-app="a" ng-controller="c" style="margin:10px;">
-<div>
-  <div class="row">
-    <div class="col-md-12" ng-include="'/menu'"></div>
-  </div>
-</div>
+<%- include('../menu') -%>
