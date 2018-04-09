@@ -1,14 +1,10 @@
 <ol class="breadcrumb"><%
-
   menu.forEach( (v,k) => {
-
-      if (index==k) {%>
+      if (index==k) {  %>
 <li class="active"><%- v.felirat -%></li> <%
-      } else {%>
+      } else {         %>
 <li><a href="<%- v.url -%>"><%- v.felirat -%></a></li> <%
       }
-
   })
-
 %>
 </ol>
