@@ -1,10 +1,11 @@
-<!--
-<div><%
+<ol class="breadcrumb"><%
 
-  //menüpont
-%><a href="/" class="btn <%
-  if (am=='gy') {%>btn-primary<%}
-  else          {%>btn-default<%}%>">kezdőlap</a><%
+  menu.forEach( (v,k) => {
 
-%></div>
--->
+    if (index==k) {%> <li class="active"><%- v.felirat -%></li> <%}
+    else {%> <li><a href="<%- v.url -%>"><%- v.felirat -%></a></li> <%}
+
+  })
+
+%>
+</ol>
