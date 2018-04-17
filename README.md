@@ -18,12 +18,12 @@ ExpessJS - EJS - AngularJS - Bootstrap - Mongoose
 ```javascript
  /
  └─┬─app.js     
-   ├─roter.js       // szerveroldali események kezelése (GET, POST)
-   ├─┬─views        // szerveroldali renderelésű fájlok (ejs)
+   ├─roter.js       // szerver-oldali események kezelése (GET, POST)
+   ├─┬─views        // szerver-oldali renderelésű fájlok (ejs)
    │ └───index.ejs  // minta (kezdeti) kimeneti fájl '/' eseményre
-   └─┬─public       // kliensoldalról elérhető fájlok
-     ├─┬─ajs        // kliensoldali scriptek
+   └─┬─public       // kliens-oldalról elérhető fájlok
+     ├─┬─ajs        // kliens-oldali scriptek
      │ └───index.js // minta (kezdeti) kimeneti fájl kliens oldali scriptje
-     └─┬─css        // kliens oldali stílusfájlok
+     └─┬─css        // kliens-oldali stílusfájlok
        └───style.css
 ```
